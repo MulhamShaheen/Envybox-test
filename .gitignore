@@ -294,3 +294,17 @@ mysql/sys/x@0024waits_by_user_by_latency.frm
 mysql/sys/x@0024waits_global_by_latency.frm
 src/public/js/app.js
 src/public/css/app.css
+mysql/envybox/failed_jobs.frm
+mysql/envybox/failed_jobs.ibd
+mysql/envybox/migrations.frm
+mysql/envybox/migrations.ibd
+mysql/envybox/password_resets.frm
+mysql/envybox/password_resets.ibd
+mysql/envybox/users.frm
+mysql/envybox/users.ibd
+src/public/js/manifest.js
+src/public/js/resources_js_Pages_Home_vue.js
+src/public/js/resources_js_Pages_Settings_vue.js
+src/public/js/vendor.js
+src/public/mix-manifest.json
+src/public/mix-manifest.json
