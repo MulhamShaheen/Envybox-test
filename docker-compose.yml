@@ -16,6 +16,7 @@ services:
     depends_on:
       - php
       - mysql
+      # - npm
     networks:
       - laravel
 
@@ -49,3 +50,29 @@ services:
       - "9000:9000"
     networks:
       - laravel
+  
+  # composer:
+  #   image: composer:2.2.0
+  #   container_name: composer
+  #   volumes:
+  #     - ./src:/var/www/html
+  #   working_dir: /var/www/html
+  #   networks:
+  #     - laravel
+
+  npm:
+    image: node:13.7
+    container_name: npm
+    volumes:
+      - ./src:/var/www/html
+    working_dir: /var/www/html
+    entrypoint: ['npm']
+    networks:
+      - laravel
+  # npm:
+  #   image: node:14
+  #   working_dir: /var/www/html
+  #   entrypoint: ["npm"]
+  #   volumes: 
+  #     - "./src/:/var/www/html"
+    
