@@ -307,4 +307,5 @@ src/public/js/resources_js_Pages_Home_vue.js
 src/public/js/resources_js_Pages_Settings_vue.js
 src/public/js/vendor.js
 src/public/mix-manifest.json
-src/public/mix-manifest.json
+src/composer.lock
+src/package-lock.json
