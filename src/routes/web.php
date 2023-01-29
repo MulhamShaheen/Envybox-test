@@ -27,16 +27,20 @@ Route::get(
     }
 )->name( 'feedback' );
 
-Route::get(
-    '/settings',
-    function () {
-        return Inertia::render(
-            'Settings',
-            [
-                'title' => 'Настройки',
-            ]
-        );
-    }
-)->name( 'settings' );
+// Route::get(
+//     '/settings',
+//     function () {
+//         return Inertia::render(
+//             'Settings',
+//             [
+//                 'title' => 'Настройки',
+//             ]
+//         );
+//     }
+// )->name( 'settings' );
+
+
+Route::get('/settings',[FeedbackController::class, 'viewSettings'])->name('view-settings');
 
 Route::post('/feedback/submit',[FeedbackController::class, 'submitFeedback'])->name('submit-feedback');
+Route::post('/settings/submit',[FeedbackController::class, 'setExportSettings'])->name('submit-settings');

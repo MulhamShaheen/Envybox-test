@@ -314,3 +314,4 @@ mysql/envybox/messages.ibd
 mysql/envybox/settings.frm
 mysql/envybox/settings.ibd
 src/storage/private_feedback/feedback.txt
+src/database/migrations/2023_01_29_092057_create_settings_table.php
