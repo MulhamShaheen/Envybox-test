@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FeedbackController;
 use Inertia\Inertia;
 
 /*
@@ -37,3 +38,5 @@ Route::get(
         );
     }
 )->name( 'settings' );
+
+Route::post('/feedback/submit',[FeedbackController::class, 'submitFeedback'])->name('submit-feedback');
