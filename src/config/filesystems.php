@@ -55,6 +55,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'private_feedback' => [
+            'driver' => 'local',
+            'root' => storage_path('private_feedback'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'private',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
