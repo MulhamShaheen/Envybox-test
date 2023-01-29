@@ -311,3 +311,6 @@ src/composer.lock
 src/package-lock.json
 mysql/envybox/messages.frm
 mysql/envybox/messages.ibd
+mysql/envybox/settings.frm
+mysql/envybox/settings.ibd
+src/storage/private_feedback/feedback.txt
