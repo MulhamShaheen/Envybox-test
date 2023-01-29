@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Config;
@@ -21,7 +22,18 @@ class FeedbackController extends Controller
         // validate
         // dd($request->all());
         
+        
+        // dd($request->validate());
+        // $validated = $request->validate();
+        
+        $validator = Validator::make($request->all(), [
+            'name' => ["required"],
+            'phone' =>["required", "regex:/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/"]
+            ])->validate();
+            
+        // dd($validator->fails());   
         $data = $request->only('name','phone','text');
+        
         $message = factory(Message::class)->make($data);
         $message->save();
 
@@ -42,8 +54,8 @@ class FeedbackController extends Controller
                 'strict'    =>  false,
             ]);
     
-            $users = DB::connection('feedback_external');
-            dd($users);
+            $external_db = DB::connection('feedback_external');
+            $external_db->statement("INSERT INTO Messages (name, phone, text) VALUES ($message->name, $message->phone, $message->text);");
         }
 
     }
