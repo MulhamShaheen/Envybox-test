@@ -2,7 +2,7 @@
 <Head>
     <title>{{ $page.props.title }} - Envybox test</title>
 </Head>
-<div class="w-screen h-screen bg-zinc-800">
+<div class="w-screen h-screen bg-zinc-800 pt-8">
     <div class="m-auto mt-8 rounded-md bg-zinc-700 w-1/3 p-1 text-yellow-50">
         <h2>
             Database for exporting feedback
